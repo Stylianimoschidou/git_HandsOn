@@ -37,6 +37,11 @@ elif has_U:
 else:
     print("The sequence can be DNA or RNA")
 
+# Compute the percentage of each nucleotide
+for nt in "ACGTU":
+    percentage = args.seq.count(nt) / len(args.seq) * 100
+    print(f"{nt}: {percentage:.2f}%")
+
 # Optional motif search
 if args.motif:
     args.motif = args.motif.upper()
